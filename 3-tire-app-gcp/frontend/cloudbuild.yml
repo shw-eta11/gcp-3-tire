@@ -22,3 +22,6 @@ steps:
 
 images:
   - 'asia-south1-docker.pkg.dev/project-dev-496407/fronted-app/frontend:$COMMIT_SHA'
+
+options:
+  logging: CLOUD_LOGGING_ONLY
