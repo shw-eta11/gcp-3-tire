@@ -1,0 +1,238 @@
+.App {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.App-header {
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 40px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+.App-header h1 {
+  color: #667eea;
+  margin-bottom: 5px;
+  font-size: 32px;
+}
+
+.App-header > p {
+  color: #666;
+  margin-bottom: 30px;
+  font-size: 14px;
+}
+
+/* Error Message */
+.error-message {
+  background-color: #fee;
+  color: #c33;
+  padding: 12px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  border-left: 4px solid #c33;
+}
+
+/* Form Container */
+.form-container {
+  background-color: #f8f9fa;
+  padding: 25px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  border: 1px solid #e9ecef;
+}
+
+.form-container h2 {
+  color: #333;
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.form {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+input, select {
+  padding: 12px 15px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-family: inherit;
+  transition: border-color 0.3s;
+}
+
+input:focus, select:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+input:disabled, select:disabled, button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+button {
+  padding: 12px 24px;
+  font-size: 14px;
+  font-weight: 600;
+  background-color: #667eea;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s;
+  white-space: nowrap;
+}
+
+button:hover:not(:disabled) {
+  background-color: #5568d3;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+button:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.delete-btn {
+  background-color: #e74c3c;
+  padding: 6px 12px;
+  font-size: 12px;
+}
+
+.delete-btn:hover:not(:disabled) {
+  background-color: #c0392b;
+}
+
+/* Messages Container */
+.messages-container {
+  margin-top: 30px;
+}
+
+.messages-container h2 {
+  color: #333;
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.messages-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.messages-table thead {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.messages-table th {
+  padding: 15px 12px;
+  text-align: left;
+  font-weight: 600;
+  border-bottom: 2px solid #667eea;
+}
+
+.messages-table td {
+  padding: 12px;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.messages-table tbody tr:hover {
+  background-color: #f8f9fa;
+}
+
+.messages-table tbody tr.status-archived {
+  opacity: 0.6;
+  background-color: #f5f5f5;
+}
+
+.messages-table td.id {
+  font-weight: 600;
+  color: #667eea;
+  width: 50px;
+  text-align: center;
+}
+
+.messages-table td.category {
+  width: 120px;
+}
+
+.badge {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 20px;
+  color: white;
+  font-size: 12px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.messages-table td.message {
+  max-width: 300px;
+  word-wrap: break-word;
+  color: #333;
+}
+
+.messages-table td.author {
+  font-size: 13px;
+  color: #666;
+  width: 100px;
+}
+
+.messages-table td.date {
+  font-size: 12px;
+  color: #999;
+  width: 150px;
+}
+
+.messages-table td.action {
+  text-align: center;
+  width: 100px;
+}
+
+/* Loading State */
+p {
+  color: #666;
+  font-size: 14px;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .App-header {
+    padding: 20px;
+  }
+
+  .form {
+    flex-direction: column;
+  }
+
+  input, select, button {
+    width: 100%;
+  }
+
+  .messages-table {
+    font-size: 12px;
+  }
+
+  .messages-table th,
+  .messages-table td {
+    padding: 8px;
+  }
+
+  .messages-table td.message {
+    max-width: 150px;
+  }
+}
