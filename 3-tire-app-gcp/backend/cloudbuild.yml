@@ -1,5 +1,6 @@
 steps:
 - name: 'gcr.io/cloud-builders/docker'
+  dir: '3-tire-app-gcp/backend'
   args:
     - build
     - '-t'
@@ -21,6 +22,7 @@ steps:
     - '--region=asia-south1'
 
 images:
-    - 'asia-south1-docker.pkg.dev/project-dev-496407/backend-app/backend:$COMMIT_SHA'
+- 'asia-south1-docker.pkg.dev/project-dev-496407/backend-app/backend:$COMMIT_SHA'
+
 options:
   logging: CLOUD_LOGGING_ONLY
