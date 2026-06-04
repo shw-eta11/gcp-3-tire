@@ -3,6 +3,8 @@ steps:
     dir: '3-tire-app-gcp/frontend'
     args:
       - build
+      - '--build-arg'
+      - 'REACT_APP_BACKEND_URL=https://backend-588700579228.asia-south1.run.app'
       - '-t'
       - 'asia-south1-docker.pkg.dev/project-dev-496407/fronted-app/frontend:$COMMIT_SHA'
       - '.'
@@ -20,6 +22,8 @@ steps:
       - frontend
       - '--image=asia-south1-docker.pkg.dev/project-dev-496407/fronted-app/frontend:$COMMIT_SHA'
       - '--region=asia-south1'
+      - '--platform=managed'
+      - '--allow-unauthenticated'
 
 images:
   - 'asia-south1-docker.pkg.dev/project-dev-496407/fronted-app/frontend:$COMMIT_SHA'
